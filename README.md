@@ -1,24 +1,101 @@
 # Flipper Zero: WiFi Attacks Project
 
-## 🔒 Overview
-This project explores the potential of the Flipper Zero ethical hacking tool to perform WiFi-based attacks:
+## Project Scope
+The Flipper Zero is an ethical hacking tool with a multitude of “fun” capabilities already built-in, including:
 
-- **Evil Portal (Evil Twin)** – Cloning legitimate WiFi portals to capture user credentials.
-- **WiFi Marauder (Sniffing)** – Monitoring WiFi traffic to detect and log devices in range.
+- RFID Scanning (e.g. hotel key cards)
+- NFC Reading (e.g. credit cards)
+- Sub-GHz signal emulation
+- Infrared universal remote control
 
-## 🛠️ Tools Used
-- Flipper Zero
+Many resources for the Flipper are open-source, allowing customization and experimentation.  
+This project explored the potential of Flipper Zero to launch two distinct wireless attacks:
+
+- **Evil Portal** (Evil Twin MitM Attack)
+- **WiFi Marauder** (Deauth + Sniffing)
+
+---
+
+## 🧪 Attack Techniques
+
+### ☠️ Evil Portal (Evil Twin Attack)
+An Evil Twin attack involves setting up a rogue WiFi access point that impersonates a legitimate one. Common in high-traffic public areas like:
+
+- Cafés
+- Airports
+- Libraries
+
+When victims connect, attackers can steal credentials or intercept traffic. These fake portals are:
+
+- Easily deployable
+- Highly effective in public networks
+- Often used as part of broader MitM attacks
+
+### 🛰️ WiFi Marauder
+A combination of **deauthentication attacks** and **packet sniffing** to:
+
+- Force users off real networks
+- Capture reconnection data and unencrypted traffic
+- Perform MiTM analysis on insecure devices
+
+Targets include:
+
+- Public / open networks
+- Outdated or misconfigured routers
+- Environments lacking WIDS/WIPS protections
+
+---
+
+## Tools Used
+
+- **Flipper Zero**
 - WiFi Devboard Addon
-- Open-source Flipper community plugins
-- Kali Linux (monitoring)
+- Kali Linux
+- Flipper Apps: Evil Portal & WiFi Marauder
+- Open-source wireless tooling
 
-## 📄 Project Artifacts
-- [Presentation Slides]
+---
 
-## ⚠️ Ethical Notice
-This project was conducted in a controlled environment strictly for educational purposes. Do not replicate in unauthorized settings.
+## Detection & Defense
 
-## 📚 Learning Outcomes
-- Learned how wireless network impersonation works
-- Understood basic packet sniffing and analysis
-- Practiced with open-source cybersecurity hardware
+### Defender Techniques
+- Use WPA3 encryption
+- Avoid untrusted networks
+- Implement WIDS/WIPS (e.g., LOCH AirShield, Palo Alto)
+- Enable Multi-Factor Authentication
+- Monitor rogue access point activity
+
+### Attacker Techniques
+- Wardriving for network reconnaissance
+- Passive sniffing & active deauthentication
+- Altering HTML/Captive Portal content
+- Ethical Consideration: Conduct only in legal, authorized environments
+
+---
+
+## Project Artifacts
+
+- [Flipping Off The World – Project Slides (PPTX)](./Flipping%20Off%20The%20World.pptx)
+
+---
+
+## Ethical Notice
+
+This project was performed in a controlled and academic setting.  
+**Do not replicate** these attacks on unauthorized networks.  
+The goal is to **understand, detect, and defend** against real-world cybersecurity threats.
+
+---
+
+## Learning Outcomes
+
+- Understood real-world attack vectors using open-source wireless tools
+- Gained hands-on experience with Man-in-the-Middle techniques
+- Learned defensive measures and detection methods for WiFi threats
+- Strengthened cybersecurity research and presentation skills
+
+---
+
+## License
+
+This repository is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more information.
