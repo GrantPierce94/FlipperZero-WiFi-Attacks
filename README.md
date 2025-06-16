@@ -16,9 +16,9 @@ This project explored the potential of Flipper Zero to launch two distinct wirel
 
 ---
 
-## 🧪 Attack Techniques
+## Attack Techniques
 
-### ☠️ Evil Portal (Evil Twin Attack)
+### Evil Portal (Evil Twin Attack)
 An Evil Twin attack involves setting up a rogue WiFi access point that impersonates a legitimate one. Common in high-traffic public areas like:
 
 - Cafés
@@ -31,7 +31,7 @@ When victims connect, attackers can steal credentials or intercept traffic. Thes
 - Highly effective in public networks
 - Often used as part of broader MitM attacks
 
-### 🛰️ WiFi Marauder
+### WiFi Marauder
 A combination of **deauthentication attacks** and **packet sniffing** to:
 
 - Force users off real networks
